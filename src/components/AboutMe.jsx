@@ -10,13 +10,15 @@ const AboutMe = () => {
     <section name="about" className="px-4">
       <Container className="flex flex-col gap-10 md:gap-0 md:flex-row justify-between">
         {/* Left part */}
-        <div className="w-full md:w-[35%] bg-[#212428] p-10 rounded-lg shadow-md shadow-black overflow-hidden group">
-          <div className=" h-[300px] md:h-[500px] flex flex-col items-center justify-center overflow-hidden rounded-md">
-            <img
-              src={AboutMeImg}
-              alt="aboutMeImage"
-              className="h-full group-hover:scale-110 duration-500 rounded-md"
-            />
+        <div className=" overflow-hidden">
+          <div className="w-full md:w-[35%] bg-[#212428] p-10 rounded-lg shadow-md shadow-black overflow-hidden group">
+            <div className=" h-[300px] md:h-[500px] flex flex-col items-center justify-center overflow-hidden rounded-md">
+              <img
+                src={AboutMeImg}
+                alt="aboutMeImage"
+                className="h-full group-hover:scale-110 duration-500 rounded-md"
+              />
+            </div>
           </div>
         </div>
         {/* Right part */}
