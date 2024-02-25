@@ -42,7 +42,7 @@ const ContactMe = () => {
               />
             </div>
             <div className="py-5 flex flex-col gap-5">
-              <p className="text-3xl text-white font-bold">Lutfo Rahman</p>
+              <p className="text-3xl text-white font-bold">Lutfor Rahman</p>
               <p className="text-base font-medium">Full Stack Devoloper</p>
               <p className="text-lg font-medium">
                 I am available for freelance work. Connect with me via and call
