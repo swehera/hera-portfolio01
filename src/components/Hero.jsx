@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="w-full px-7 md:px-0 bg-primaryColor md:bg-hero-image bg-cover z-40">
         <Container className="py-20">
           <div className="w-full md:w-1/2 flex flex-col gap-y-5">
-            <p className="text-sm md:text-base uppercase text-lightText uppercase">
+            <p className="text-sm md:text-base  text-lightText uppercase">
               Full Stack developer
             </p>
             <h2 className="text-5xl md:text-7xl font-bold text-white">
