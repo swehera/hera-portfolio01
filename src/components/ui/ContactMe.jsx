@@ -42,8 +42,8 @@ const ContactMe = () => {
               />
             </div>
             <div className="py-5 flex flex-col gap-5">
-              <p className="text-3xl text-white font-bold">Nevine Acotanza</p>
-              <p className="text-base font-medium">Chief Operating Officer</p>
+              <p className="text-3xl text-white font-bold">Lutfor Rahman</p>
+              <p className="text-base font-medium">Full Stack Devoloper</p>
               <p className="text-lg font-medium">
                 I am available for freelance work. Connect with me via and call
                 in to my account.
