@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components {
+    .iconStyle {
+        @apply text-2xl text-designColor;
+    }
+
+    .portfolioIconStyle {
+        @apply hover:bg-slate-900 hover:-translate-y-2 hover:text-designColor duration-500 w-10 h-10 inline-flex text-white justify-center items-center rounded-md bg-primaryColor shadow-md shadow-black;
+    }
+    
+    .inputStyle {
+        @apply flex-1 rounded-md bg-black text-white px-6 py-2 outline-none border border-lightText hover:border-designColor mt-3 placeholder:text-gray-500 focus-within:border-designColor duration-300
+    }
+}
