@@ -46,7 +46,7 @@ const ContactMe = () => {
               <p className="text-base font-medium">Full Stack Devoloper</p>
               <p className="text-lg font-medium">
                 I am available for freelance work. Connect with me via and call
-                in to my account.
+                in to my accounts.
               </p>
               <div>
                 <p className="text-lg font-medium">
