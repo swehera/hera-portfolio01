@@ -17,7 +17,7 @@ export default {
       },
 
       backgroundImage: {
-        "hero-image": "url('./src/assets/portfolioImages/banner.png')",
+        "hero-image": "url('src/assets/portfolioImages/banner.png')",
       },
     },
   },
