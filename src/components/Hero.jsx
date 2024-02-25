@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "./Container";
 import { Typewriter } from "react-simple-typewriter";
+
 import Button from "./ui/Button";
 
 const Hero = () => {
