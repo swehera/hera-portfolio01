@@ -26,18 +26,13 @@ const AboutMe = () => {
           <Subtitle title="About me" />
           <Title title="Lutfor Rahman" />
           <p>
-            Dr. Laura Jerry brings a wealth of experience and expertise to her
-            practice. With a focus on patient-centered care, she is known for
-            her warm and empathetic approach, always taking the time to listen
-            to her patients’ concerns. Her extensive medical knowledge and
-            dedication to staying at the forefront of the field make her a
-            trusted healthcare partner.
+            I am lutfor Rahman Hira, I completed my diploma engineering in cse
+            from munshiganj polytechnic institute. And Recently I learned MERN
+            Stack development with PropleNTech
           </p>
           <p>
-            Explore the range of medical services Dr. Collins offers, including
-            general check-ups, preventative care, chronic disease management,
-            and more. She is committed to working with you to develop
-            personalized treatment plans that suit your unique needs.
+            Previously I wanted to know that how actually web technology works.
+            And that curiosity make me a web developer today.
           </p>
           <Button title="Learn more" className="w-40 h-14" />
         </div>

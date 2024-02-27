@@ -14,9 +14,9 @@ const Hero = () => {
 
   return (
     <section name="hero">
-      <div className="w-full px-7 md:px-0 bg-primaryColor md:bg-hero-image lg:bg-hero-image bg-cover z-40">
+      <div className="w-full px-10 md:px-0  bg-primaryColor md:bg-hero-image lg:bg-hero-image bg-cover z-40">
         <Container className="py-20">
-          <div className="w-full md:w-1/2 flex flex-col gap-y-5">
+          <div className=" md:w-2/3 flex flex-col gap-y-5">
             <p className="text-sm md:text-base  text-lightText uppercase">
               Full Stack developer
             </p>
@@ -35,11 +35,13 @@ const Hero = () => {
                 delaySpeed={1000}
               />
             </h2>
-            <p className="text-base text-lightText pr-32 font-medium">
-              I am full stack developer with 3+ years of expreience in web
-              development. I completed many project in my previous. Recently I
-              learn about mern stack development with peoplentech.
-            </p>
+            <div className=" w-full md:w-1/2">
+              <p className="text-base flex flex-col items-center   text-lightText font-medium">
+                I am full stack developer with 3+ years of expreience in web
+                development. I completed many project in my previous. Recently I
+                learn about mern stack development with peoplentech.
+              </p>
+            </div>
             <Button className="w-40 h-14 " />
           </div>
         </Container>

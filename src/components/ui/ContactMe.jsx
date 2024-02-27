@@ -4,6 +4,9 @@ import Subtitle from "./Subtitle";
 import Title from "./Title";
 import SocialIcon from "./SocialIcon";
 import { contact } from "../../assets/getImage";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
+import { ColorRing, RotatingLines } from "react-loader-spinner";
 
 const ContactMe = () => {
   const [userName, setUserName] = useState("");
@@ -11,6 +14,10 @@ const ContactMe = () => {
   const [email, setEmali] = useState("");
   const [subject, setSubject] = useState("");
   const [messages, setMessages] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const [err, setErr] = useState("");
 
   const handleSubmit = () => {
     console.log(userName);
@@ -18,11 +25,49 @@ const ContactMe = () => {
     console.log(email);
     console.log(subject);
     console.log(messages);
-    setUserName("");
-    setPhone("");
-    setEmali("");
-    setSubject("");
-    setMessages("");
+
+    if (userName == "") {
+      setErr("Enter your username");
+      toast.error("Enter your username");
+    } else if (phone == "") {
+      setErr("Please enter your phone number!");
+      toast.error("Enter your phone");
+    } else if (email == "") {
+      setErr("Please enter your email!");
+      toast.error("Enter your email");
+    } else if (subject == "") {
+      setErr("Please enter your subject");
+      toast.error("Enter your subject");
+    } else if (messages == "") {
+      setErr("Please enter your message");
+      toast.error("Enter your message");
+    } else {
+      setLoading(true);
+      axios
+        .post("https://getform.io/f/lejElldj", {
+          Name: userName,
+          Phone: phone,
+          Email: email,
+          Subject: subject,
+          Message: messages,
+        })
+        .then((res) => {
+          if (res?.status === 200) {
+            toast.success("Message send succesfully!");
+            setErr("");
+            setLoading(false);
+            setSuccess(true);
+            setUserName("");
+            setPhone("");
+            setEmali("");
+            setSubject("");
+            setMessages("");
+          } else {
+            console.log("Data submitting error from getform");
+            setLoading(false);
+          }
+        });
+    }
   };
   return (
     <section name="contact" className="px-4">
@@ -67,74 +112,103 @@ const ContactMe = () => {
             </div>
           </div>
 
-          <div className=" w-full md:w-2/3 lg:w-2/3 bg-primaryColor shadow-md shadow-black p-10 rounded-lg flex flex-col gap-7">
-            <div className="flex flex-col md:flex-row justify-between gap-10">
-              <div className="flex flex-1 flex-col gap-1">
-                <p className="text-sm uppercase">Your name : </p>
-                <input
-                  type="text"
-                  placeholder="Enter your name"
-                  className="inputStyle"
-                  onChange={(e) => setUserName(e.target.value)}
-                  value={userName}
-                />
+          <div className=" w-full md:w-2/3 lg:w-2/3 bg-primaryColor shadow-md shadow-black p-10 rounded-lg flex flex-col gap-7 ">
+            {!loading && success && (
+              <div className=" h-20 flex flex-col items-center justify-center mb-3">
+                <p className="text-2xl text-center text-green-300 font-semibold mb-3">
+                  {`Your messages sent successfully`}
+                </p>
               </div>
-              <div className="flex flex-1 flex-col gap-1">
-                <p className="text-sm uppercase">Phone Number : </p>
-                <input
-                  type="text"
-                  placeholder="Enter your phone number"
-                  className="inputStyle"
-                  onChange={(e) => setPhone(e.target.value)}
-                  value={phone}
+            )}
+            {loading ? (
+              <div className="flex flex-col items-center justify-center h-full">
+                <RotatingLines
+                  visible={true}
+                  height="96"
+                  width="96"
+                  color="grey"
+                  strokeWidth="5"
+                  animationDuration="0.75"
+                  ariaLabel="rotating-lines-loading"
+                  wrapperStyle={{}}
+                  wrapperClass=""
                 />
+                <p className="text-xl font-semibold text-white">
+                  Your messages is sending ...
+                </p>
               </div>
-            </div>
-
-            <div className="flex  flex-col gap-1">
-              <p className="text-sm uppercase">Email : </p>
-              <input
-                type="text"
-                placeholder="Enter your email"
-                className="inputStyle"
-                required
-                onChange={(e) => setEmali(e.target.value)}
-                value={email}
-              />
-            </div>
-
-            <div className="flex  flex-col gap-1">
-              <p className="text-sm uppercase">Subject : </p>
-              <input
-                type="text"
-                placeholder="Enter your subject"
-                className="inputStyle"
-                onChange={(e) => setSubject(e.target.value)}
-                value={subject}
-              />
-            </div>
-
-            <div className="flex  flex-col gap-1">
-              <p className="text-sm uppercase">Your Message </p>
-              <textarea
-                type="text"
-                placeholder="Enter your messages"
-                className="inputStyle"
-                cols={1}
-                rows={6}
-                onChange={(e) => setMessages(e.target.value)}
-                value={messages}
-              />
-            </div>
-
-            <button
-              onClick={handleSubmit}
-              className="border-[1px] border-gray-500 py-2 rounded-md hover:border-designColor duration-300 uppercase hover:text-white"
-            >
-              Send Message
-            </button>
+            ) : (
+              <div className="flex flex-col gap-10">
+                {err && (
+                  <div className="text-orange-600 bg-zinc-950 py-2 px-4 font-semibold">
+                    <p>{err}</p>
+                  </div>
+                )}
+                <div className="flex flex-col md:flex-row justify-between gap-7">
+                  <div className="flex flex-1 flex-col gap-3 relative">
+                    <p className="text-sm uppercase">Your name</p>
+                    <input
+                      type="text"
+                      placeholder="Enter your name"
+                      className="inputStyle"
+                      onChange={(e) => setUserName(e.target.value)}
+                      value={userName}
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col gap-3 relative">
+                    <p className="text-sm uppercase">Phone Number</p>
+                    <input
+                      type="number"
+                      placeholder="Enter your phone number"
+                      className="inputStyle"
+                      onChange={(e) => setPhone(e.target.value)}
+                      value={phone}
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-3 relative">
+                  <p className="text-sm uppercase">Email</p>
+                  <input
+                    type="email"
+                    placeholder="Enter your Email"
+                    className="inputStyle"
+                    onChange={(e) => setEmali(e.target.value)}
+                    value={email}
+                  />
+                </div>
+                <div className="flex flex-col gap-3 relative">
+                  <p className="text-sm uppercase">Subject</p>
+                  <input
+                    type="text"
+                    placeholder="Define a subject"
+                    className="inputStyle"
+                    onChange={(e) => setSubject(e.target.value)}
+                    value={subject}
+                  />
+                </div>
+                <div className="flex flex-col gap-3 relative">
+                  <p className="text-sm uppercase">Your Message</p>
+                  <textarea
+                    type="text"
+                    placeholder="Enter your messages..."
+                    className="inputStyle"
+                    cols={1}
+                    rows={3}
+                    onChange={(e) => setMessages(e.target.value)}
+                    value={messages}
+                  />
+                </div>
+                <button
+                  onClick={handleSubmit}
+                  className="border-[1px] border-gray-500 py-2 rounded-md hover:border-designColor duration-300 uppercase hover:text-white"
+                >
+                  Send Message
+                </button>
+              </div>
+            )}
           </div>
         </div>
+        <Toaster position="top-center" />
       </Container>
     </section>
   );
