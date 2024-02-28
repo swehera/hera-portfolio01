@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="w-full px-10 md:px-0  bg-primaryColor md:bg-hero-image lg:bg-hero-image bg-cover z-40">
         <Container className="py-20">
           <div className=" md:w-2/3 flex flex-col gap-y-5">
-            <p className="text-sm md:text-base  text-lightText uppercase">
+            <p className="text-sm md:text-base animate-pulse   text-lightText uppercase">
               Full Stack developer
             </p>
             <h2 className="text-5xl md:text-7xl font-bold text-white">
@@ -27,7 +27,7 @@ const Hero = () => {
               a{" "}
               <Typewriter
                 words={words}
-                loop={5}
+                loop={0}
                 cursor
                 cursorStyle="|"
                 typeSpeed={70}
@@ -42,7 +42,7 @@ const Hero = () => {
                 learn about mern stack development with peoplentech.
               </p>
             </div>
-            <Button className="w-40 h-14 " />
+            <Button className=" w-32 md:w-40 h-12 md:h-14 hover:animate-bounce " />
           </div>
         </Container>
       </div>

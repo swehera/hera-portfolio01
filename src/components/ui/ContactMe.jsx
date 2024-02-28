@@ -94,16 +94,16 @@ const ContactMe = () => {
                 in to my accounts.
               </p>
               <div>
-                <p className="text-lg font-medium">
+                <p className="text-[16px] md:text-lg font-medium">
                   Phone :{" "}
                   <span className="text-white hover:text-designColor hover:underline duration-500">
                     +88-01843471410
                   </span>
                 </p>
-                <p className="text-lg font-medium">
+                <p className=" text-[16px] md:text-lg font-medium ">
                   Email :{" "}
-                  <span className="text-white  hover:text-designColor hover:underline duration-500">
-                    adoffsolution@gmail.com
+                  <span className="text-white   hover:text-designColor hover:underline duration-500">
+                    devlutfor@gmail.com
                   </span>
                 </p>
               </div>

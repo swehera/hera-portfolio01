@@ -31,8 +31,8 @@ const AboutMe = () => {
             Stack development with PropleNTech
           </p>
           <p>
-            Previously I wanted to know that how actually web technology works.
-            And that curiosity make me a web developer today.
+            I always wanted to know how web technology works. And that curiosity
+            makes me a web developer today.
           </p>
           <Button title="Learn more" className="w-40 h-14" />
         </div>

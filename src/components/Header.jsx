@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo1.png";
 import { motion } from "framer-motion";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
@@ -38,7 +38,7 @@ const Header = () => {
               offset={50}
               duration={500}
             >
-              <p className="text-sm uppercase text-lightText font-semibold hover:text-designColor cursor-pointer duration-300">
+              <p className="text-sm hover:animate-pulse uppercase text-lightText font-semibold hover:text-designColor cursor-pointer duration-300">
                 {title}
               </p>
             </Link>
@@ -56,7 +56,7 @@ const Header = () => {
         </div>
       </div>
       {showMenu && (
-        <div className="fixed top-0 min-h-screen w-full md:hidden bg-black/50 text-gray-200">
+        <div className="fixed top-0 min-h-full w-full md:hidden bg-black/50 text-gray-200">
           <motion.div
             initial={{ x: -40, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
