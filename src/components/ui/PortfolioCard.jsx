@@ -1,23 +1,12 @@
-import React from 'react'
+import React from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { MdArrowOutward } from "react-icons/md";
 
-
-
-const PortfolioCard = ({item}) => {
-    console.log(item);
+const PortfolioCard = ({ item }) => {
+  console.log(item);
   return (
     <div className="w-full bg-black p-10 bg-gradient-to-tr from-primaryColor to-primaryColor/80 shadow shadow-lightText/10 rounded-lg ">
-
-      
-
-
-
-
-
-
-
-        <a href={item.link} target="blank">
+      <a href={item.link} target="blank">
         <div className="w-full h-72 rounded-lg overflow-hidden relative group">
           <img
             src={item.img}
@@ -40,9 +29,9 @@ const PortfolioCard = ({item}) => {
             </h2>
           </div>
         </div>
-        </a>
-      </div>
-  )
-}
+      </a>
+    </div>
+  );
+};
 
-export default PortfolioCard
+export default PortfolioCard;
