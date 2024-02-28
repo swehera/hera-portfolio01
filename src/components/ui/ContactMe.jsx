@@ -146,7 +146,7 @@ const ContactMe = () => {
                 )}
                 <div className="flex flex-col md:flex-row justify-between gap-7">
                   <div className="flex flex-1 flex-col gap-3 relative">
-                    <p className="text-sm uppercase">Your name</p>
+                    <p className="text-sm uppercase">Your name:</p>
                     <input
                       type="text"
                       placeholder="Enter your name"
@@ -156,7 +156,7 @@ const ContactMe = () => {
                     />
                   </div>
                   <div className="flex flex-1 flex-col gap-3 relative">
-                    <p className="text-sm uppercase">Phone Number</p>
+                    <p className="text-sm uppercase">Phone Number:</p>
                     <input
                       type="number"
                       placeholder="Enter your phone number"
@@ -167,7 +167,7 @@ const ContactMe = () => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-3 relative">
-                  <p className="text-sm uppercase">Email</p>
+                  <p className="text-sm uppercase">Email:</p>
                   <input
                     type="email"
                     placeholder="Enter your Email"
@@ -177,10 +177,10 @@ const ContactMe = () => {
                   />
                 </div>
                 <div className="flex flex-col gap-3 relative">
-                  <p className="text-sm uppercase">Subject</p>
+                  <p className="text-sm uppercase">Subject:</p>
                   <input
                     type="text"
-                    placeholder="Define a subject"
+                    placeholder="Your a subject"
                     className="inputStyle"
                     onChange={(e) => setSubject(e.target.value)}
                     value={subject}
