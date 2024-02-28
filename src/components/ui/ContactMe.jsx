@@ -74,7 +74,7 @@ const ContactMe = () => {
       <Container className="border-b border-black ">
         <div className="flex flex-col items-center">
           <Subtitle title="CONTACT " />
-          <Title title="Contact With Me" />
+          <Title title="Contact With Me" className=" text-center" />
         </div>
 
         <div className="flex flex-col md:flex-row gap-10 pt-10">
