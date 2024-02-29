@@ -5,6 +5,8 @@ import Title from "./Title";
 import { useState } from "react";
 import EducationTab from "./EducationTab";
 import Skills from "./Skills";
+import Experience from "./Experience";
+import Certificates from "./Certificates";
 
 const Resume = () => {
   const [education, setEducation] = useState(true);
@@ -73,8 +75,8 @@ const Resume = () => {
           <div>
             {education && <EducationTab />}
             {skills && <Skills />}
-            {experience && <div>Experience Part</div>}
-            {certificate && <div>Certificates Part</div>}
+            {experience && <Experience />}
+            {certificate && <Certificates />}
           </div>
         </div>
       </Container>
