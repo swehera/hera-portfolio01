@@ -11,11 +11,8 @@ const Portfolio = () => {
     <section name="portfolio" className=" px-3">
       <Container className="border-b border-black flex flex-col gap-7">
         <div className="flex flex-col items-center">
-          <Subtitle
-            title="Here are some of my projects"
-            className=" text-center"
-          />
-          <Title title="My Projects" />
+          <Subtitle title="Portfolio" className=" text-center" />
+          <Title title="My Portfolio" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pt-10">
           {portfolioData.map((item) => (
