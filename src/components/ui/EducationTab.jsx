@@ -4,9 +4,9 @@ import Subtitle from "./Subtitle";
 const EducationTab = () => {
   return (
     <div className=" flex flex-col md:flex-row  w-full">
-      <div className=" w-full md:w-1/2">
+      <div className=" w-full  md:w-1/2">
         <div className="flex items-center mt-3">
-          <div className="w-full md:w-full px-16 py-5  ">
+          <div className="w-full md:w-full px-5 md:px-16 py-5  ">
             <Subtitle title="2016-2023" />
             <p className=" text-3xl font-bold text-titleColor">
               Education Qualification
@@ -33,9 +33,9 @@ const EducationTab = () => {
         </div>
       </div>
 
-      <div className="  w-full md:w-1/2">
+      <div className="  w-full  md:w-1/2">
         <div className="flex items-center mt-3">
-          <div className="w-full md:w-full px-16 py-5  ">
+          <div className="w-full md:w-full px-5 md:px-16 py-5  ">
             <Subtitle title="2022-2023" />
             <p className=" text-3xl font-bold text-titleColor">
               Job Experience
