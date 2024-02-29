@@ -1,12 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const Subtitle = ({title}) => {
+const Subtitle = ({ title, className }) => {
   return (
-    <p className="text-base font-medium text-designColor uppercase">
-   
-    {title}
-  </p>
-  )
-}
+    <p
+      className={`${className} text-base font-medium text-designColor uppercase`}
+    >
+      {title}
+    </p>
+  );
+};
 
-export default Subtitle
+export default Subtitle;
