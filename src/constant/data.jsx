@@ -68,28 +68,29 @@ export const featuresData = [
 export const portfolioData = [
   {
     id: 101,
-    title: "NFT Dashboard Application Development.",
-    subtitle: "Gallery",
+    title: "Digital Marketing Agency",
+    subtitle: "Image",
     img: imgOne,
     icon: <PiGridFourBold />,
-    link: "https://facebook.com",
+    link: "https://github.com/swehera",
   },
   {
     id: 102,
-    title: "Online Food Delivery Mobile App Design.",
-    subtitle: "Video",
+    title: "Car Demage Repair Agency.",
+    subtitle: "Image",
     img: imgTwo,
     icon: <IoVideocamOutline />,
-    link: "https://facebook.com",
+    link: "https://github.com/swehera",
   },
   {
     id: 103,
-    title: "Travel App Design Creativity & Application. ",
-    subtitle: "External Link",
+    title: "Web Development Agency ",
+    subtitle: "Image",
     img: imgThree,
     icon: <FaSquareArrowUpRight />,
-    link: "https://facebook.com",
+    link: "https://adoffsolution.xyz/",
   },
+  /*
   {
     id: 104,
     title: "Workout Website Design And Development. ",
@@ -114,4 +115,5 @@ export const portfolioData = [
     icon: <AiOutlineMenu />,
     link: "https://facebook.com",
   },
+  */
 ];
