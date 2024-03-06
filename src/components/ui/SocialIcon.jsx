@@ -1,12 +1,17 @@
 import React from "react";
 import { BsTwitterX } from "react-icons/bs";
 import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io";
 
 const SocialIcon = () => {
   return (
     <div className="flex items-center gap-5">
-      <a href="" target="blank" className="portfolioIconStyle">
-        <BsTwitterX />
+      <a
+        href="https://www.youtube.com/@heratech2721"
+        target="blank"
+        className="portfolioIconStyle"
+      >
+        <IoLogoYoutube />
       </a>
 
       <a
