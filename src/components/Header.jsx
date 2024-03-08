@@ -61,7 +61,7 @@ const Header = () => {
             initial={{ x: -40, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="w-96 min-h-screen bg-primaryColor p-10 flex flex-col gap-5"
+            className="w-full min-h-screen bg-primaryColor p-10 flex flex-col gap-5"
           >
             <div className="flex items-center justify-between">
               <img src={logo} alt="logo" className="w-20" />

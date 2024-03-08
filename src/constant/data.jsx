@@ -22,6 +22,8 @@ import {
   imgTwo,
 } from "../assets/getImage";
 
+import { diploma, freecodecamp } from "../assets/getImage";
+
 export const featuresData = [
   {
     id: 1,
@@ -116,4 +118,15 @@ export const portfolioData = [
     link: "https://facebook.com",
   },
   */
+];
+
+export const certificateData = [
+  {
+    id: 1,
+    img: diploma,
+  },
+  {
+    id: 2,
+    img: freecodecamp,
+  },
 ];

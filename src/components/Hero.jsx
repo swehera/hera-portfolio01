@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <section name="hero">
-      <div className="w-full px-10 md:px-0  bg-primaryColor md:bg-hero-image lg:bg-hero-image bg-cover z-40">
+      <div className="w-full px-10  md:px-2 lg:px-10  bg-primaryColor md:bg-hero-image lg:bg-hero-image bg-cover z-40">
         <Container className="py-20">
           <div className=" md:w-2/3 flex flex-col gap-y-5">
             <p className="text-sm md:text-base animate-pulse   text-lightText uppercase">
