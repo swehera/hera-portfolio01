@@ -78,19 +78,19 @@ export const portfolioData = [
   },
   {
     id: 102,
-    title: "Car Demage Repair Agency.",
+    title: "Beautiful Portfolio Design",
     subtitle: "Image",
     img: imgTwo,
     icon: <IoVideocamOutline />,
-    link: "https://github.com/swehera",
+    link: "https://hera-portfolio-01.vercel.app/",
   },
   {
     id: 103,
-    title: "Web Development Agency ",
+    title: "JSON Placeholder Clone ",
     subtitle: "Image",
     img: imgThree,
     icon: <FaSquareArrowUpRight />,
-    link: "https://adoffsolution.xyz/",
+    link: "https://json-placeholder-six.vercel.app/",
   },
   /*
   {
