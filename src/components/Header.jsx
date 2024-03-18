@@ -24,8 +24,8 @@ const Header = () => {
     <header className="w-full h-20  sticky top-0 z-50  bg-[#0f1013]/95 bg-opacity-95 shadow-xl bg-primaryColor drop-shadow-md ">
       <div className="h-full max-w-screen-xl mx-auto flex items-center justify-between px-4">
         <div>
-          <Link to={"/"}>
-            <img src={logo} alt="logo" className="w-24" />
+          <Link to={"hero"} spy={true} smooth={true} offset={50} duration={500}>
+            <img src={logo} alt="logo" className="w-24 cursor-pointer" />
           </Link>
         </div>
         <div className="hidden md:inline-flex items-center gap-6">
