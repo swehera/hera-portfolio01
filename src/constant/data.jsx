@@ -70,11 +70,11 @@ export const featuresData = [
 export const portfolioData = [
   {
     id: 101,
-    title: "User Management System",
+    title: "Food Store Site",
     subtitle: "Image",
-    img: imgOne,
+    img: imgFour,
     icon: <PiGridFourBold />,
-    link: "https://user-manage-app-five.vercel.app/",
+    link: "https://foodstore-blond.vercel.app/",
   },
   {
     id: 102,
@@ -86,10 +86,18 @@ export const portfolioData = [
   },
   {
     id: 103,
-    title: "JSON Placeholder Clone ",
+    title: "User Management",
+    subtitle: "Image",
+    img: imgOne,
+    icon: <FaSquareArrowUpRight />,
+    link: "https://user-manage-app-five.vercel.app/",
+  },
+  {
+    id: 104,
+    title: "JSONPlaceholder Clone",
     subtitle: "Image",
     img: imgThree,
-    icon: <FaSquareArrowUpRight />,
+    icon: <IoVideocamOutline />,
     link: "https://json-placeholder-six.vercel.app/",
   },
   /*
