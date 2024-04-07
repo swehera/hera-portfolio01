@@ -13,7 +13,7 @@ const ContactMe = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmali] = useState("");
   const [subject, setSubject] = useState("");
-  const [messages, setMessages] = useState("");
+  const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
@@ -24,7 +24,7 @@ const ContactMe = () => {
     console.log(phone);
     console.log(email);
     console.log(subject);
-    console.log(messages);
+    console.log(message);
 
     if (userName == "") {
       setErr("Enter your username");
@@ -38,18 +38,23 @@ const ContactMe = () => {
     } else if (subject == "") {
       setErr("Please enter your subject");
       toast.error("Enter your subject");
-    } else if (messages == "") {
+    } else if (message == "") {
       setErr("Please enter your message");
       toast.error("Enter your message");
     } else {
       setLoading(true);
       axios
-        .post("https://getform.io/f/navkgkvb", {
-          Name: userName,
-          Phone: phone,
-          Email: email,
-          Subject: subject,
-          Message: messages,
+        .post("https://hera-contact-api.onrender.com/api/contact", {
+          // Name: userName,
+          // Phone: phone,
+          // Email: email,
+          // Subject: subject,
+          // Message: messages,
+          userName,
+          phone,
+          email,
+          subject,
+          message,
         })
         .then((res) => {
           if (res?.status === 200) {
@@ -61,7 +66,7 @@ const ContactMe = () => {
             setPhone("");
             setEmali("");
             setSubject("");
-            setMessages("");
+            setMessage("");
           } else {
             console.log("Data submitting error from getform");
             setLoading(false);
@@ -194,8 +199,8 @@ const ContactMe = () => {
                     className="inputStyle"
                     cols={1}
                     rows={3}
-                    onChange={(e) => setMessages(e.target.value)}
-                    value={messages}
+                    onChange={(e) => setMessage(e.target.value)}
+                    value={message}
                   />
                 </div>
                 <button
