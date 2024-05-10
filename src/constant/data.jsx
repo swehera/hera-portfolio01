@@ -70,11 +70,11 @@ export const featuresData = [
 export const portfolioData = [
   {
     id: 101,
-    title: "Food Store Site",
+    title: "E-Cart Store",
     subtitle: "Image",
     img: imgFour,
     icon: <PiGridFourBold />,
-    link: "https://foodstore-blond.vercel.app/",
+    link: "https://addtocart-heradev.vercel.app/",
   },
   {
     id: 102,

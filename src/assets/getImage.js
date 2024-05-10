@@ -7,6 +7,7 @@ import imgSix from "./portfolioImages/6.jpg";
 import diploma from "./certificates/diploma.png";
 import freecodecamp from "./certificates/freecodecamp.png";
 import contact from "./contact1.png";
+import resume from "./resume/hera-resume.pdf";
 
-export { imgOne, imgTwo, imgThree, imgFour, imgFive, imgSix, contact };
+export { imgOne, imgTwo, imgThree, imgFour, imgFive, imgSix, contact, resume };
 export { freecodecamp, diploma };
