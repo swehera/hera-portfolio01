@@ -70,11 +70,11 @@ export const featuresData = [
 export const portfolioData = [
   {
     id: 101,
-    title: "E-Cart Store",
+    title: "Amazon Clone",
     subtitle: "Image",
     img: imgFour,
     icon: <PiGridFourBold />,
-    link: "https://addtocart-heradev.vercel.app/",
+    link: "https://amazonclone-hera.vercel.app/",
   },
   {
     id: 102,
@@ -86,11 +86,11 @@ export const portfolioData = [
   },
   {
     id: 103,
-    title: "User Management",
+    title: "e-commerce dashboard ",
     subtitle: "Image",
     img: imgOne,
     icon: <FaSquareArrowUpRight />,
-    link: "https://user-manage-app-five.vercel.app/",
+    link: "https://e-dashboard-hera.vercel.app/",
   },
   {
     id: 104,
